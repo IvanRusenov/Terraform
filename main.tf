@@ -9,6 +9,13 @@ terraform {
       version = "4.55.0"
     }
   }
+
+  backend "azurerm" {
+    resource_group_name = "storageRG"
+    storage_account_name = "ivanstaskboardstorage"
+    container_name = "taskboardcontainer"
+    key = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
