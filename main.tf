@@ -50,7 +50,6 @@ resource "azurerm_mssql_database" "tbdb" {
   license_type         = "LicenseIncluded"
   max_size_gb          = 2
   sku_name             = var.database_sku_name
-  zone_redundant       = var.database_zone_redundant
   storage_account_type = var.database_storage_account_type
 
   lifecycle {

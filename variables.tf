@@ -73,18 +73,8 @@ variable "database_sku_name" {
   type        = string
 }
 
-variable "database_zone_redundant" {
-  description = "Is zone redundant enable"
-  type        = bool
-}
-
 variable "database_storage_account_type" {
   description = "The type of storage account(Local)"
-  type        = string
-}
-
-variable "web_app_database_connection_string" {
-  description = "Connection string"
   type        = string
 }
 
