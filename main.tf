@@ -54,7 +54,7 @@ resource "azurerm_mssql_database" "tbdb" {
   storage_account_type = var.database_storage_account_type
 
   lifecycle {
-    prevent_destroy = var.prevent_destroy
+    prevent_destroy = false
   }
 }
 

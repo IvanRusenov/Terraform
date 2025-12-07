@@ -14,6 +14,6 @@ service_plan_sku_name = "F1"
 database_collation = "SQL_Latin1_General_CP1_CI_AS"
 database_sku_name = "S0"
 database_storage_account_type = "Local"
-database_prevent_destroy = false
+# database_prevent_destroy = false
 
 web_app_database_connection_string="Data Source=tcp:${azurerm_mssql_server.tbs.fully_qualified_domain_name},1433;Initial Catalog=${azurerm_mssql_database.tbdb.name};User ID=${azurerm_mssql_server.tbs.administrator_login};Password=${azurerm_mssql_server.tbs.administrator_login_password};Trusted_Connection=False; MultipleActiveResultSets=True;"
