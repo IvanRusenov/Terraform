@@ -67,7 +67,7 @@ resource "azurerm_linux_web_app" "taskapp" {
   connection_string {
     name  = "DefaultConnection"
     type  = "SQLAzure"
-    value = var.web_app_database_connection_string
+    value = "Data Source=tcp:${azurerm_mssql_server.tbs.fully_qualified_domain_name},1433;Initial Catalog=${azurerm_mssql_database.tbdb.name};User ID=${azurerm_mssql_server.tbs.administrator_login};Password=${azurerm_mssql_server.tbs.administrator_login_password};Trusted_Connection=False; MultipleActiveResultSets=True;"
   }
 
   site_config {
