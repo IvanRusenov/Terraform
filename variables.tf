@@ -83,11 +83,6 @@ variable "database_storage_account_type" {
   type        = string
 }
 
-variable "database_prevent_destroy" {
-  description = "Prevent database from destroing(true,false)"
-  type        = bool
-}
-
 variable "web_app_database_connection_string" {
   description = "Connection string"
   type        = string
